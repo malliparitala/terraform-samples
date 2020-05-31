@@ -15,3 +15,5 @@ Key Concepts for VPCs:
                      An instance (EC2 or Lambda?) can have upto 5 SGs
     NACLs (Network ACLs): optional layer of security for VPC that acts as firewall for controlling traffic in and out of one or more subnets.
                           NACL rules similar to SG rules adds an additional layer of security to VPC.
+
+cidr_block: 
