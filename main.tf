@@ -17,4 +17,3 @@ resource "null_resource" "example" {
     value = "A example resource that does nothing!"
   }
 }
-
