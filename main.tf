@@ -9,16 +9,21 @@ terraform {
       name = "terraform-samples"
     }
   }
-}
-
-# An example resource that does nothing.
-resource "null_resource" "example" {
-  triggers = {
-    value = "A example resource that does nothing!"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
   }
 }
 
+# Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"
+}
+
+# Create a VPC
+resource "aws_vpc" "example" {
+  cidr_block = "10.0.0.0/16"
 }
 
