@@ -1,7 +1,0 @@
-echo "export PATH=\$PATH:$(pwd)" >> ~/.bashrc 
-wget https://releases.hashicorp.com/terraform/0.12.25/terraform_0.12.25_linux_amd64.zip
-unzip -o terraform*.zip
-rm terraform*.zip
-echo "exec bash"
-mkdir -p $HOME/.aws
-cp ./getting_started/.credentials $HOME/.aws/credentials
