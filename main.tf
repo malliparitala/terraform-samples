@@ -9,6 +9,12 @@ terraform {
     }
   }
 
+  required_providers {
+    null = {
+      source = "hashicorp/null"
+    }
+  }
+
   backend "remote" {
     # The name of your Terraform Cloud organization.
     organization = "naga-paritala"
