@@ -7,9 +7,6 @@ terraform {
     random = {
       source = "hashicorp/random"
     }
-  }
-
-  required_providers {
     null = {
       source = "hashicorp/null"
     }
