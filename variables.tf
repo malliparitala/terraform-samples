@@ -5,8 +5,10 @@ variable "main_region" {
 
 variable "organization" {
   description = "terraform organization name"
+  default = "naga-paritala"
 }
 
 variable "workspace_name" {
   description = "terraform workspace_name name"
+  default = "terraform-samples"
 }
