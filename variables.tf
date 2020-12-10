@@ -13,4 +13,5 @@ variable "workspace_name" {
 
 variable "required_providers" {
   description = "All the required providers"
+  type = "map"
 }

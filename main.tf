@@ -2,15 +2,15 @@
 terraform {
   required_providers {
     aws = {
-      source = var.required_providers.aws
+      source = var.required_providers[var.aws]
       #source = "hashicorp/aws"
     }
     random = {
-      source = var.required_providers.random
+      source = var.required_providers[var.random]
       #source = "hashicorp/random"
     }
     null = {
-      source = var.required_providers.null
+      source = var.required_providers[var.null]
       #source = "hashicorp/null"
     }
   }
