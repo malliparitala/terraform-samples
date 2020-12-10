@@ -2,23 +2,26 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source = var.required_providers.aws
+      #source = "hashicorp/aws"
     }
     random = {
-      source = "hashicorp/random"
+      source = var.required_providers.random
+      #source = "hashicorp/random"
     }
     null = {
-      source = "hashicorp/null"
+      source = var.required_providers.null
+      #source = "hashicorp/null"
     }
   }
 
   backend "remote" {
     # The name of your Terraform Cloud organization.
-    organization = "naga-paritala"
+    organization = var.organization
 
     # The name of the Terraform Cloud workspace to store Terraform state files in.
     workspaces {
-      name = "terraform-samples"
+      name = var.workspace_name
     }
   }
 }
