@@ -8,10 +8,6 @@ variable "region" {
 
 variable "base_cidr_block" {}
 
-provider "aws" {
-  region = var.region
-}
-
 variable "region_numbers" {
   default = {
     us-east-1 = 0
