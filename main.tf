@@ -26,9 +26,11 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
   region = var.main_region
-  version = "~> 3.0"
 }
 
 module "vpc" {
   source = "./vpc"
+  providers = {
+    aws = aws
+  }
 }
