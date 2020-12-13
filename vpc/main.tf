@@ -1,29 +1,7 @@
-# The configuration for the `remote` backend.
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-    }
-    random = {
-      source = "hashicorp/random"
-    }
-    null = {
-      source = "hashicorp/null"
-    }
-  }
-
-  backend "remote" {
-    # The name of your Terraform Cloud organization.
-    organization = "naga-paritala"
-
-    # The name of the Terraform Cloud workspace to store Terraform state files in.
-    workspaces {
-      name = "terraform-samples"
-    }
-  }
+resource "main_vpc" "main_vpc" {
+  cidr_block = var.cidr_block
 }
 
-# Configure the AWS Provider
-provider "aws" {
-  region = var.main_region
+resource "igateway" "main_internet_gateway" {
+  vpc_id = main_vpc.main_vpc.id
 }
