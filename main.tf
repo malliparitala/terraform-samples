@@ -29,5 +29,5 @@ provider "aws" {
 }
 
 module "vpc" {
-    source = "./vpc"
+  source = "./vpc"
 }
