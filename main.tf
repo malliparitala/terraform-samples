@@ -32,11 +32,10 @@ module "vpc" {
   source = "./vpc"
 }
 
-module "iam" {
-  source = "./iam"
-}
+module "eks" {
+  source = "./eks"
 
-#module "eks" {
-#  source = "./eks"
-#  eks_role_arn = "abcd"
-#}
+  subnet_fe_id = module.vpc.subnet_fe_id
+  subnet_be_id = module.vpc.subnet_be_id
+  subnet_db_id = module.vpc.subnet_db_id
+}

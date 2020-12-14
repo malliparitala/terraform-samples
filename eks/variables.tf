@@ -1,4 +1,3 @@
-variable "eks_role_arn" {
-  type = string
-  default = ""
-}
+variable "subnet_fe_id" {}
+variable "subnet_be_id" {}
+variable "subnet_db_id" {}

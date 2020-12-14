@@ -3,5 +3,5 @@ output "vpc_id" {
 }
 
 output "eks_role_arn" {
-  value = module.iam.eks_role_arn
+  value = module.eks.eks_role_arn
 }
