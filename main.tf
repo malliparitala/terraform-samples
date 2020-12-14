@@ -38,7 +38,4 @@ module "iam" {
 
 module "eks" {
   source = "./eks"
-  depends_on = [
-    module.iam.eks_role_arn
-  ]
 }
