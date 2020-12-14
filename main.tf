@@ -38,7 +38,7 @@ module "iam" {
 
 module "eks" {
   source = "./eks"
-  eks_role_arn = "arn:aws:iam::801210904757:role/eks-cluster-role"
+  eks_role_arn = var.eks_role_arn
 }
 
 #module "eks" {
