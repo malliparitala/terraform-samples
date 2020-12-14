@@ -38,5 +38,7 @@ module "iam" {
 
 module "eks" {
   source = "./eks"
-  eks_role_arn = module.iam.eks_role_arn
+  depends_on = [
+    module.iam.eks_role_arn
+  ]
 }
