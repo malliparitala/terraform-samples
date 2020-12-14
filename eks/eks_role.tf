@@ -11,25 +11,16 @@ resource "aws_iam_role" "eks_role" {
         "Service": "eks.amazonaws.com"
       },
       "Action": "sts:AssumeRole"
-    }
-  ]
-}
-POLICY
-
-  eks_admin_policy = <<POLICY
-{
-  "Version": "2012-10-17",
-  "Statement": [
+    },
     {
       "Sid": "eksadministrator",
       "Effect": "Allow",
       "Action": "eks:*",
       "Resource": "*"
-      }
-    ]
+    }
+  ]
 }
 POLICY
-
 }
 
 resource "aws_iam_role_policy_attachment" "eks_role-AmazonEKSClusterPolicy" {
