@@ -28,3 +28,38 @@ resource "aws_iam_role_policy_attachment" "eks_role-AmazonEKSVPCResourceControll
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController"
   role       = aws_iam_role.eks_role.name
 }
+
+resource "aws_iam_role_policy_attachment" "eks_role-AmazonEKS_CNI_Policy" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
+  role       = aws_iam_role.eks_role.name
+}
+
+resource "aws_iam_role_policy_attachment" "eks_role-AmazonEKSFargatePodExecutionRolePolicy" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy"
+  role       = aws_iam_role.eks_role.name
+}
+
+resource "aws_iam_role_policy_attachment" "eks_role-AmazonEKSForFargateServiceRolePolicy" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSForFargateServiceRolePolicy"
+  role       = aws_iam_role.eks_role.name
+}
+
+resource "aws_iam_role_policy_attachment" "eks_role-AmazonEKSServicePolicy" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
+  role       = aws_iam_role.eks_role.name
+}
+
+resource "aws_iam_role_policy_attachment" "eks_role-AmazonEKSServiceRolePolicy" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServiceRolePolicy"
+  role       = aws_iam_role.eks_role.name
+}
+
+resource "aws_iam_role_policy_attachment" "eks_role-AmazonEKSWorkerNodePolicy" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
+  role       = aws_iam_role.eks_role.name
+}
+
+resource "aws_iam_role_policy_attachment" "eks_role-AWSServiceRoleForAmazonEKSNodegroup" {
+  policy_arn = "arn:aws:iam::aws:policy/AWSServiceRoleForAmazonEKSNodegroup"
+  role       = aws_iam_role.eks_role.name
+}
