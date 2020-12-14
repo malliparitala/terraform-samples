@@ -35,7 +35,7 @@ module "vpc" {
 module "eks" {
   source = "./eks"
 
-  subnet_fe_id = var.subnet_fe_id
-  subnet_be_id = var.subnet_be_id
-  subnet_db_id = var.subnet_db_id
+  subnet_fe_id = module.vpc.subnet_fe_id
+  subnet_be_id = module.vpc.subnet_be_id
+  subnet_db_id = module.vpc.subnet_db_id
 }
