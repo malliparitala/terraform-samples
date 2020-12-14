@@ -32,10 +32,10 @@ module "vpc" {
   source = "./vpc"
 }
 
-module "vpc" {
+module "iam" {
   source = "./iam"
 }
 
-module "vpc" {
+module "eks" {
   source = "./eks"
 }
