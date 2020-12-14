@@ -39,27 +39,12 @@ resource "aws_iam_role_policy_attachment" "eks_role-AmazonEKSFargatePodExecution
   role       = aws_iam_role.eks_role.name
 }
 
-resource "aws_iam_role_policy_attachment" "eks_role-AmazonEKSForFargateServiceRolePolicy" {
-  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSForFargateServiceRolePolicy"
-  role       = aws_iam_role.eks_role.name
-}
-
 resource "aws_iam_role_policy_attachment" "eks_role-AmazonEKSServicePolicy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
   role       = aws_iam_role.eks_role.name
 }
 
-resource "aws_iam_role_policy_attachment" "eks_role-AmazonEKSServiceRolePolicy" {
-  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServiceRolePolicy"
-  role       = aws_iam_role.eks_role.name
-}
-
 resource "aws_iam_role_policy_attachment" "eks_role-AmazonEKSWorkerNodePolicy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
-  role       = aws_iam_role.eks_role.name
-}
-
-resource "aws_iam_role_policy_attachment" "eks_role-AWSServiceRoleForAmazonEKSNodegroup" {
-  policy_arn = "arn:aws:iam::aws:policy/AWSServiceRoleForAmazonEKSNodegroup"
   role       = aws_iam_role.eks_role.name
 }
