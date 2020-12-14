@@ -38,10 +38,4 @@ module "iam" {
 
 module "eks" {
   source = "./eks"
-  eks_role_arn = var.eks_role_arn
 }
-
-#module "eks" {
-#  source = "./eks"
-#  eks_role_arn = "abcd"
-#}
