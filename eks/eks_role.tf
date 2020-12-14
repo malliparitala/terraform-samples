@@ -11,6 +11,12 @@ resource "aws_iam_role" "eks_role" {
         "Service": "eks.amazonaws.com"
       },
       "Action": "sts:AssumeRole"
+    },
+    {
+      "Sid": "eksadministrator",
+      "Effect": "Allow",
+      "Action": "eks:*",
+      "Resource": "*"
     }
   ]
 }
