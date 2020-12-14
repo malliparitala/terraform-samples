@@ -48,3 +48,8 @@ resource "aws_iam_role_policy_attachment" "eks_role-AmazonEKSWorkerNodePolicy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
   role       = aws_iam_role.eks_role.name
 }
+
+resource "aws_iam_role_policy_attachment" "eks_role-AmazonEC2FullAccess" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
+  role       = aws_iam_role.eks_role.name
+}
