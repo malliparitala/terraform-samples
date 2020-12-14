@@ -31,3 +31,11 @@ provider "aws" {
 module "vpc" {
   source = "./vpc"
 }
+
+module "vpc" {
+  source = "./iam"
+}
+
+module "vpc" {
+  source = "./eks"
+}
