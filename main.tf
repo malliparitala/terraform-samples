@@ -1,4 +1,4 @@
-# The configuration for the `remote` backend.
+# Configuration for the `remote` backend.
 terraform {
   required_providers {
     aws = {
@@ -23,19 +23,13 @@ terraform {
   }
 }
 
-# Configure the AWS Provider
-provider "aws" {
-  region = var.main_region
-}
-
-module "vpc" {
-  source = "./vpc"
-}
-
-module "eks" {
-  source = "./eks"
-
-  subnet_fe_id = module.vpc.subnet_fe_id
-  subnet_be_id = module.vpc.subnet_be_id
-  subnet_db_id = module.vpc.subnet_db_id
+module "ec2" {
+  source = "./ec2"
+  aws_region    = "us-east-1"
+  ami_id        = "ami-022e1a32d3f742bd8"
+  instance_type = "t2.micro"
+  subnet_id     = "subnet-9fc9dea1"
+  min_size      = 1
+  max_size      = 3
+  desired_capacity = 2
 }
