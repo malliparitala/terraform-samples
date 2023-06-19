@@ -1,0 +1,128 @@
+terraform: The keyword used to define the Terraform configuration block.
+provider: Used to specify the provider block for configuring the infrastructure provider, such as AWS, Azure, or Google Cloud.
+resource: Used to define and create a resource (e.g., an EC2 instance, S3 bucket, or VPC) within the provider.
+data: Used to retrieve or query data from an external source or provider, such as retrieving information about existing resources.
+module: Used to define and reference a reusable module, which is a collection of Terraform configuration files that can be used across projects.
+variable: Used to declare input variables that can be passed to the Terraform configuration, allowing for customization and parameterization.
+output: Used to define the outputs of the Terraform configuration, which are values that can be shown after applying the configuration or accessed by other components.
+locals: Used to define local variables within a Terraform configuration, allowing for calculations or transformations of values within the configuration.
+data: Used to define and retrieve data from a remote source, such as AWS S3, AWS DynamoDB, or a consul key-value store.
+terraform: Used within resources and modules to access specific Terraform built-in functions or to reference attributes of other resources.
+
+-----------
+
+terraform: The keyword used to define the Terraform configuration block.
+provider: Used to specify the provider block for configuring the infrastructure provider, such as AWS, Azure, or Google Cloud.
+resource: Used to define and create a resource within the provider.
+data: Used to retrieve or query data from an external source or provider.
+module: Used to define and reference a reusable module.
+variable: Used to declare input variables.
+output: Used to define the outputs of the Terraform configuration.
+locals: Used to define local variables within a Terraform configuration.
+terraform: Used to access specific Terraform built-in functions or reference attributes of other resources.
+backend: Used to configure a backend for storing the Terraform state remotely.
+terraform: Used to access and manipulate the Terraform state.
+count: Used to create multiple instances of a resource based on a count value.
+for_each: Used to create multiple instances of a resource based on a map or set of values.
+depends_on: Used to specify explicit dependencies between resources.
+if: Used to conditionally create or configure resources based on a certain condition.
+var: Used to reference a variable within the Terraform configuration.
+terraform: Used to access and manipulate Terraform settings and attributes.
+provisioner: Used to define actions or scripts to provision resources.
+connection: Used to define connection-related settings for resources.
+resource_type: Represents the type of resource, such as aws_instance, aws_s3_bucket, or azurerm_virtual_network.
+provider_type: Represents the type of provider, such as aws, azurerm, or google.
+data_source_type: Represents the type of data source, such as aws_ami, aws_vpc, or azurerm_resource_group.
+
+--------------
+
+terraform: The keyword used to define the Terraform configuration block.
+provider: Used to specify the provider block for configuring the infrastructure provider, such as AWS, Azure, or Google Cloud.
+resource: Used to define and create a resource within the provider.
+data: Used to retrieve or query data from an external source or provider.
+module: Used to define and reference a reusable module.
+variable: Used to declare input variables.
+output: Used to define the outputs of the Terraform configuration.
+locals: Used to define local variables within a Terraform configuration.
+terraform: Used to access specific Terraform built-in functions or reference attributes of other resources.
+backend: Used to configure a backend for storing the Terraform state remotely.
+terraform: Used to access and manipulate the Terraform state.
+count: Used to create multiple instances of a resource based on a count value.
+for_each: Used to create multiple instances of a resource based on a map or set of values.
+depends_on: Used to specify explicit dependencies between resources.
+if: Used to conditionally create or configure resources based on a certain condition.
+var: Used to reference a variable within the Terraform configuration.
+terraform: Used to access and manipulate Terraform settings and attributes.
+provisioner: Used to define actions or scripts to provision resources.
+connection: Used to define connection-related settings for resources.
+resource_type: Represents the type of resource, such as aws_instance, aws_s3_bucket, or azurerm_virtual_network.
+provider_type: Represents the type of provider, such as aws, azurerm, or google.
+data_source_type: Represents the type of data source, such as aws_ami, aws_vpc, or azurerm_resource_group.
+template: Used to render templates that can be used in resource configurations.
+remote_state: Used to retrieve outputs from a remote Terraform state file.
+dynamic: Used to create dynamic blocks or nested blocks within a resource.
+provisioner: Used to define how to provision resources, such as running scripts or executing commands.
+resource_type.name: Represents the name of a specific resource instance, such as aws_instance.example.
+module.module_name: Represents the name of a specific module instance, such as module.example_module.
+for_each.value: Represents the value of the current element in a for_each loop.
+for_each.key: Represents the key of the current element in a for_each loop.
+
+------------
+
+terraform
+provider
+data
+resource
+module
+variable
+output
+locals
+terraform
+backend
+count
+for_each
+depends_on
+if
+else
+var
+terraform
+provisioner
+connection
+lifecycle
+resource_type.name
+provider_type.name
+data_source_type.name
+template
+remote_state
+dynamic
+null_resource
+tls_private_key
+locals
+provisioner
+module_version
+required_providers
+provider
+version
+upgrade_policy
+source
+module_call_name
+module_call_variable
+for
+each
+key
+value
+try
+catch
+ignore_changes
+create_before_destroy
+prevent_destroy
+depends_on
+init
+validate
+plan
+apply
+refresh
+destroy
+import
+state
+output
