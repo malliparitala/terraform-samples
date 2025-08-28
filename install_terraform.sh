@@ -2,7 +2,7 @@
 
 # Install Terraform
 echo "Installing Terraform..."
-TERRAFORM_VERSION="1.5.0"
+TERRAFORM_VERSION="1.13.1"
 TERRAFORM_ZIP="terraform_${TERRAFORM_VERSION}_linux_amd64.zip"
 TERRAFORM_URL="https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/${TERRAFORM_ZIP}"
 TERRAFORM_DIR="/usr/local/bin"
