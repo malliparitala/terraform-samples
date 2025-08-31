@@ -26,9 +26,9 @@ terraform {
 module "ec2" {
   source           = "./ec2"
   aws_region       = "us-east-1"
-  ami_id           = "ami-022e1a32d3f742bd8"
+  ami_id           = "ami-00ca32bbc84273381"
   instance_type    = "t2.micro"
-  subnet_id        = "subnet-9fc9dea1"
+  subnet_id        = "subnet-0c72867798b243975"
   min_size         = 1
   max_size         = 3
   desired_capacity = 2
