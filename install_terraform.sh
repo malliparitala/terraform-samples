@@ -14,22 +14,24 @@ unzip "$TERRAFORM_ZIP"
 sudo mv terraform "$TERRAFORM_DIR"
 rm -f "$TERRAFORM_ZIP"
 
-# Configure Terraform
-echo "Configuring Terraform..."
-read -p "Enter your AWS access key ID: " AWS_ACCESS_KEY_ID
-read -p "Enter your AWS secret access key: " AWS_SECRET_ACCESS_KEY
-read -p "Enter your terraform backend token: " TERRAFORM_API_TOKEN
+# Detect architecture
+ARCH=$(uname -m)
+if [ "$ARCH" = "x86_64" ]; then
+  PKG="awscli-exe-linux-x86_64.zip"
+elif [ "$ARCH" = "aarch64" ] || [ "$ARCH" = "arm64" ]; then
+  PKG="awscli-exe-linux-aarch64.zip"
+else
+  echo "Unsupported architecture: $ARCH"
+  exit 1
+fi
 
-cat <<EOF > ~/.terraformrc
-credentials "aws" {
-  access_key = "$AWS_ACCESS_KEY_ID"
-  secret_access_key = "$AWS_SECRET_ACCESS_KEY"
-}
+# Download and install
+curl "https://awscli.amazonaws.com/${PKG}" -o "awscliv2.zip"
+unzip -q awscliv2.zip
+sudo ./aws/install
 
-credentials "app.terraform.io" {
-  token = "$TERRAFORM_API_TOKEN"
-}
+# Verify
+aws --version
 
-EOF
+rm -rf aws awscliv2.zip AWSCLIV2.pkg
 
-echo "Terraform installation and configuration completed."
